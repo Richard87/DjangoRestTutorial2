@@ -32,3 +32,5 @@ class UserSnippetSerializer(serializers.ModelSerializer):
 
         if title_length < min_length:
             raise serializers.ValidationError("Title is to short! Must be longer than %d" % min_length)
+
+        return value
